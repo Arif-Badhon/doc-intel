@@ -1,0 +1,198 @@
+# ============================================================================
+# DocIntel - .gitignore Configuration
+# Production-Ready ML Project
+# ============================================================================
+
+# PYTHON & VIRTUAL ENVIRONMENTS
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv
+
+# Coverage and testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDE & EDITORS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode-server/
+*.code-workspace
+*.iml
+.gradle
+
+# DATA & MODELS (CRITICAL - Don't commit large files)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/features/*
+!data/features/.gitkeep
+data/artifacts/*
+!data/artifacts/.gitkeep
+
+# Model checkpoints (very large!)
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+models/registry/*
+!models/registry/.gitkeep
+
+# Model files
+*.pt
+*.pth
+*.bin
+*.h5
+*.joblib
+*.pkl
+*.pickle
+*.ckpt
+
+# ML EXPERIMENT TRACKING & CACHING
+mlruns/*
+!mlruns/.gitkeep
+.mlflow/
+mlflow.db
+wandb/
+wandb/*
+!wandb/.gitkeep
+.dvc/cache/
+.dvc/tmp/
+dvc.lock
+.cache/
+.huggingface/
+events.out.tfevents.*
+
+# LOGS
+logs/*
+!logs/.gitkeep
+*.log
+*.log.*
+
+# DATABASE & CACHE
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+qdrant_storage/
+*.index
+*.npy
+dump.rdb
+appendonly.aof
+
+# DOCKER
+.docker/
+docker-compose.override.yml
+docker-volume-data/
+
+# BUILD & DISTRIBUTION
+*.egg-info/
+*.egg
+*.whl
+setup.py.bak
+
+# TEMPORARY & BACKUP
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+$RECYCLE.BIN/
+
+# SECRETS & CREDENTIALS (NEVER COMMIT)
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+.aws/
+.gcp/
+.azure/
+.ssh/
+*.key
+*.pem
+*.ppk
+credentials.json
+secrets.json
+auth.json
+service-account.json
+hf_token.txt
+aws.env
+
+# JUPYTER NOTEBOOKS
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# OLLAMA & LLM MODELS
+ollama_data/
+ollama_models/
+.ollama/
+llm_cache/
+model_cache/
+
+# OUTPUT FILES
+reports/
+predictions/
+inference_outputs/
+analysis/
+temp_analysis/
+
+# KEEP THESE FILES
+!.github/
+!.gitignore
+!.gitattributes
+!.env.example
+!pyproject.toml
+!requirements.txt
+!requirements-dev.txt
+!README.md
+!Makefile
+!docker/
+!configs/
+!notebooks/
+!scripts/
+!src/
+!tests/
+!docs/
