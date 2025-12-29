@@ -196,3 +196,9 @@ temp_analysis/
 !src/
 !tests/
 !docs/
+
+.env.local
+.env.prod
+.env
+*.env
+
